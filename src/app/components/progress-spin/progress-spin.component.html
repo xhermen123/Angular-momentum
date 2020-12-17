@@ -1,0 +1,23 @@
+<div id="progress-spin">
+    <svg viewBox="0 0 100 100" style="width: 100px;height: 100px;">
+      <defs>
+        <linearGradient x1="0%" y1="0%" x2="50%" y2="88.7718962%" id="fadedGradient">
+          <stop stop-color="#5e52f5" offset="0%"/>
+          <stop stop-color="#04e1fe" offset="50%"/>
+        </linearGradient>
+      </defs>
+      <g>
+        <circle 
+          cx="50%" 
+          cy="50%" 
+          r="45">
+        </circle>
+      </g>
+    </svg>
+    <svg viewBox="0 0 100 100" style="width: 100px;height: 100px;" class="spin-svg">
+      <g id="front" stroke="url(#fadedGradient)" stroke-linecap="round" stroke-width="10" fill="none">
+        <path d="M 50 5 A 45 45 0 0 1 95 50"/>
+      </g>
+    </svg>
+    <span class="percent">{{percent}}</span>
+</div>

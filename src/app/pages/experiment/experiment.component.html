@@ -1,0 +1,148 @@
+<div id="experiment">
+	<div class="page-header">
+		<div class="toggle-div">
+			<img class="menu-toggle-icon" src="assets/svgs/menu-toggle-icon.svg"/>
+		</div>
+		<div class="title-div">
+			MOMENTUM
+		</div>
+		<div class="profile-menu-div">
+			<button [matMenuTriggerFor]="menu" class="toolbar-menu-btn">
+				<span>Samshad</span>
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</button>
+			<mat-menu #menu="matMenu" [overlapTrigger]="false">
+				<button mat-menu-item>
+					<mat-icon>home</mat-icon>
+					<span>Home</span>
+				</button>
+				<button mat-menu-item>
+					<mat-icon>people_outline</mat-icon>
+					<span>Connecting</span>
+				</button>
+				<button mat-menu-item>
+					<mat-icon>videocam</mat-icon>
+					<span>Let's talk</span>
+				</button>
+				<button mat-menu-item>
+					<mat-icon>exit_to_app</mat-icon>
+					<span>Logout</span>
+				</button>
+			</mat-menu>
+		</div>
+	</div>
+	<div class="content">
+		<div class="row">
+			<div class="col-sm-3 col-xs-12">
+				<p class="sub-title1 mb-1">DATASET</p>
+				<span class="sub-desc-text">heart_disease.csv</span>
+				<div class="row mt-4 mb-4">
+					<div class="col-4">
+						<p class="sub-title1 mb-1">ROWS</p>
+						<span class="sub-desc-num">40</span>
+					</div>
+					<div class="col-6">
+						<p class="sub-title1 mb-1">COLUMNS</p>
+						<span class="sub-desc-num">12</span>
+					</div>
+				</div>
+				<div class="mt-4 mb-4">
+					<p class="sub-title1 mb-1">TARGET COLUMN</p>
+					<span class="sub-desc-text">Select Target</span>
+				</div>
+				<div class="mt-4 mb-4">
+					<div class="left-desc-div">
+						<p class="sub-title2 mb-1">WEIGHT COLUMN</p>
+						<span class="sub-desc-text">--</span>
+					</div>
+					<div class="right-desc-div">
+						<p class="sub-title2 mb-1">TIME COLUMN</p>
+						<span class="sub-desc-text">OFF</span>
+					</div>
+				</div>
+				<div class="mt-4 mb-4">
+					<div class="left-desc-div">
+						<p class="sub-title2 mb-1">TYPE</p>
+						<span class="sub-desc-num">str</span>
+					</div>
+					<div class="right-desc-div">
+						<p class="sub-title2 mb-1">COUNT</p>
+						<span class="sub-desc-num">50001</span>
+					</div>
+				</div>
+				<div class="mt-4 mb-4">
+					<div class="left-desc-div">
+						<p class="sub-title2 mb-1">UNIQUE</p>
+						<span class="sub-desc-num">2</span>
+					</div>
+					<div class="right-desc-div">
+						<p class="sub-title2 mb-1">TARGET FREQ</p>
+						<span class="sub-desc-num">8125</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-xs-12">
+				<div class="start-experiment-btn">
+					<div  class="start-experiment-btn-inner">
+						<div class="start-experiment-btn-last-inner">
+							<span class="experiment-text">START EXPERIMENT</span>
+						</div>
+					</div>
+				</div>
+				<div class="progress-div row">
+					<div class="progress-item col-4">
+						<app-progress-spin class="progress-spin" [percent]="7"></app-progress-spin>
+						<p>ACCURACY</p>
+						<app-toggle-button class="tg-btn" [name]="'CLASSIFICATION'" [checked]="classification" [width]="'180'" (toggle)="classificationToggle($event)"></app-toggle-button>
+					</div>
+					<div class="progress-item col-4">
+						<app-progress-spin class="progress-spin" [percent]="3"></app-progress-spin>
+						<p>TIME</p>
+						<app-toggle-button class="tg-btn" [name]="'REPRODUCIBLE'" [checked]="reproducible" [width]="'180'" (toggle)="reproducibleToggle($event)"></app-toggle-button>
+					</div>
+					<div class="progress-item col-4">
+						<app-progress-spin class="progress-spin" [percent]="5"></app-progress-spin>
+						<p>INTERPETABILITY</p>
+						<app-toggle-button class="tg-btn" [name]="'ENABLE GPUS'" [checked]="enablegpu" [width]="'180'" (toggle)="enablegpuToggle($event)"></app-toggle-button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 row">
+				<div class="toggle-button-wrapper">
+					<p class="sub-title1 mb-4 mt-4">SCORER</p>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'GINI'" [checked]="gini" [width]="'180'" (toggle)="giniToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'MCC'" [checked]="mcc" [width]="'180'" (toggle)="mccToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'FOS'" [checked]="fos" [width]="'180'" (toggle)="fosToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'F1'" [checked]="f1" [width]="'180'" (toggle)="f1Toggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'F2'" [checked]="f2" [width]="'180'" (toggle)="f2Toggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'ACCURACY'" [checked]="accuracy" [width]="'180'" (toggle)="accuracyToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'LOGLOSS'" [checked]="logloss" [width]="'180'" (toggle)="loglossToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'AUC'" [checked]="auc" [width]="'180'" (toggle)="aucToggle($event)"></app-toggle-button>
+					</div>
+					<div class="toggle-button-item">
+						<app-toggle-button [name]="'AUCPR'" [checked]="aucpr" [width]="'180'" (toggle)="aucprToggle($event)"></app-toggle-button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<img src="assets/svgs/logo.svg">
+		<span>© 2011-2018 Accure Inc. All rights reserved.</span>
+	</div>
+</div>

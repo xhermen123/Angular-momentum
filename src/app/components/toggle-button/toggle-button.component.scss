@@ -1,0 +1,22 @@
+@import '../../variable.scss';
+
+#toggle-btn-component {
+    width: fit-content;
+    .toggle-btn {
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+        letter-spacing: 2px;
+        font-size: 14px;
+        border: none;
+        background-image: linear-gradient($gradient-blue, $gradient-purple);
+        cursor: pointer;
+        
+        &[enabled="false"] {
+            background-image: none;
+            background-color: $toggle-btn-disable;
+        }
+    }
+}

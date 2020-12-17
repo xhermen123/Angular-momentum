@@ -1,0 +1,181 @@
+@import '../../variable.scss';
+
+#experiment {
+    min-height: 100vh;
+    background-image: radial-gradient(#0b1c25, #040710, #00000c);
+    
+    .page-header {
+        padding: 30px 50px;
+        display: flex;
+
+        .toggle-div {
+            flex: 0 1 150px;
+        }
+
+        .title-div {
+            flex: 0 1 100%;
+            text-align: center;
+            color: white;
+            font-family: 'Mandali';
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .profile-menu-div {
+            flex: 1 1 150px;
+            color: white;
+            line-height: 31px;
+            text-align: right;
+
+            i {
+                margin-left: 10px;
+            }
+
+            .toolbar-menu-btn {
+                background: none;
+                border: none;
+                color: white;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .content {
+        padding: 10px 50px;
+        // position: absolute;
+        // width: 100%;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+
+        .sub-title1 {
+            font-size: 16px;
+            color: white;
+            letter-spacing: 0.25rem;
+        }
+
+        .sub-title2 {
+            font-size: 12px;
+            color: white;
+            letter-spacing: 0.25rem;
+        }
+
+        .sub-desc-text {
+            font-size: 40px;
+            color: #00ccee;
+            font-family: monospace;
+            font-weight: 200 !important;
+        }
+
+        .sub-desc-num {
+            font-size: 40px;
+            color: white;
+            font-family: unset;
+            font-weight: 200 !important;
+        }
+
+        .left-desc-div {
+            display: inline-block;
+            padding-right: 30px;
+        }
+
+        .right-desc-div {
+            display: inline-block;
+        }
+
+        .start-experiment-btn {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 30px 40px 11px #000000;
+            background-image: linear-gradient(#282f52, #111428);
+            padding: 12px;
+
+            .start-experiment-btn-inner {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: #1a5070;
+                padding: 10px;
+
+                .start-experiment-btn-last-inner {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-image: linear-gradient(#282f52, #111428);
+                    padding: 10px;
+                    text-align: center;
+
+                    .experiment-text {
+                        color: white;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        .progress-div {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            color: $light-blue-text;
+            text-align: center;
+
+            .progress-spin {
+                display: block;
+                width: fit-content;
+                margin: auto;
+            }
+
+            .tg-btn {
+                display: block;
+                width: fit-content;
+                margin: auto;
+            }
+        }
+
+        .toggle-button-wrapper {
+            width: fit-content;
+            margin-left: auto;
+            text-align: right;
+
+            .toggle-button-item {
+                margin: 15px 0px;
+            }
+        }
+    }
+
+    .footer {
+        // position: absolute;
+        // bottom: 0px;
+        padding: 20px 50px;
+        text-align: center;
+        width: 100%;
+        padding-top: 70px;
+
+        img {
+            padding-right: 20px;
+            width: 50px;
+        }
+
+        span {
+
+        }
+    }
+}
